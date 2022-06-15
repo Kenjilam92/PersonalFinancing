@@ -4,12 +4,15 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
+@Entity
+@Table(name="WalletTransactions")
 public class WalletTransaction {
 	
 	@Id
