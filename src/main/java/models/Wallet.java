@@ -64,6 +64,12 @@ public class Wallet {
 	public void setTransactions(List<WalletTransaction> transactions) {
 		this.transactions = transactions;
 	}
+	@Override
+	public String toString() {
+		return "Wallet [id=" + id + ", name=" + name + ", description=" + description + ", balances=" + balances
+				+ ", transactions=" + transactions + ", createdDate=" + createdDate + ", updateDate=" + updateDate
+				+ "]";
+	}
 	
 	
 
