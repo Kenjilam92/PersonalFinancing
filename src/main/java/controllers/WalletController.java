@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WalletController {
-	@GetMapping("")
+	@GetMapping("/wallets")
 	public String show() {
 		return "this will show all wallets";
 	}
