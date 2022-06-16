@@ -8,15 +8,15 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import models.Wallet;
+
 @Repository
-//@Transactional
+@Transactional
 public class RepositoryWallet {
-	@Autowired
+	@PersistenceContext
 	EntityManager em;
-	
-	public RepositoryWallet() {
-		// TODO Auto-generated constructor stub
-		
+	public Wallet findById(long id) {
+		return em.find(Wallet.class,id);
 	}
 
 }
