@@ -26,8 +26,8 @@ public class Wallet {
 	private String description;
 	@Column(name="Balances")
 	private double balances;
-	@OneToMany(mappedBy="wallet")
-	private List<WalletTransaction> transactions;
+//	@OneToMany(mappedBy="wallet")
+//	private List<WalletTransaction> transactions;
 	@CreationTimestamp
 	private LocalDateTime createdDate;
 	@UpdateTimestamp
@@ -65,17 +65,16 @@ public class Wallet {
 	public void setBalances(double balances) {
 		this.balances = balances;
 	}
-	public List<WalletTransaction> getTransactions() {
-		return transactions;
-	}
-	public void setTransactions(List<WalletTransaction> transactions) {
-		this.transactions = transactions;
-	}
+//	public List<WalletTransaction> getTransactions() {
+//		return transactions;
+//	}
+//	public void setTransactions(List<WalletTransaction> transactions) {
+//		this.transactions = transactions;
+//	}
 	@Override
 	public String toString() {
 		return "Wallet [id=" + id + ", name=" + name + ", description=" + description + ", balances=" + balances
-				+ ", transactions=" + transactions + ", createdDate=" + createdDate + ", updateDate=" + updateDate
-				+ "]";
+				+ ", createdDate=" + createdDate + ", updateDate=" + updateDate + "]";
 	}
 	
 	
