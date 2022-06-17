@@ -1,4 +1,4 @@
-package models;
+package udemy.hexaware.com.PersonalFinancing.models;
 
 
 import java.time.LocalDateTime;
@@ -33,9 +33,9 @@ public class Wallet {
 	@UpdateTimestamp
 	private LocalDateTime updateDate;
 	
+	public Wallet() {}
 	
 	public Wallet(String name, String description, double balances) {
-		super();
 		this.name = name;
 		this.description = description;
 		this.balances = balances;

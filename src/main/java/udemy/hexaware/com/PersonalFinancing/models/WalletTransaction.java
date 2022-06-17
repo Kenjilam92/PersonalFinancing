@@ -1,4 +1,4 @@
-package models;
+package udemy.hexaware.com.PersonalFinancing.models;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -26,8 +27,8 @@ public class WalletTransaction {
 	private String category;
 	@Column(name="amount")
 	private double amount;
-	@Column(name="Wallet")
-	private Wallet wallet;
+//	@ManyToOne
+//	private Wallet wallet;
 	@Column(name="Transaction_date")
 	private LocalDate transactionDate;
 	@CreationTimestamp
@@ -35,7 +36,7 @@ public class WalletTransaction {
 	@UpdateTimestamp
 	private LocalDateTime updateDate;
 
-	
+	public WalletTransaction() {}
 	
 	public WalletTransaction(double amount, String store, String description, String category, Wallet wallet) {
 		super();
@@ -43,7 +44,7 @@ public class WalletTransaction {
 		this.store = store;
 		this.description = description;
 		this.category = category;
-		this.wallet = wallet;
+//		this.wallet = wallet;
 	}
 
 	public WalletTransaction(double amount, String store, String category, Wallet wallet) {
@@ -51,7 +52,7 @@ public class WalletTransaction {
 		this.amount = amount;
 		this.store = store;
 		this.category = category;
-		this.wallet = wallet;
+//		this.wallet = wallet;
 	}
 
 	
@@ -87,13 +88,13 @@ public class WalletTransaction {
 		this.category = category;
 	}
 
-	public Wallet getWallet() {
-		return wallet;
-	}
-
-	public void setWallet(Wallet wallet) {
-		this.wallet = wallet;
-	}
+//	public Wallet getWallet() {
+//		return wallet;
+//	}
+//
+//	public void setWallet(Wallet wallet) {
+//		this.wallet = wallet;
+//	}
 
 	
 

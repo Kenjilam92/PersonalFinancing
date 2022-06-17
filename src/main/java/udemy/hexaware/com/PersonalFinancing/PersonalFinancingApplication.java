@@ -5,12 +5,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import Repository.RepositoryWallet;
-import controllers.WalletController;
+import udemy.hexaware.com.PersonalFinancing.controllers.WalletController;
+import udemy.hexaware.com.PersonalFinancing.repository.RepositoryWallet;
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses = WalletController.class)
-@ComponentScan(basePackageClasses = RepositoryWallet.class)
+//@ComponentScan(basePackageClasses = WalletController.class)
+//@ComponentScan(basePackageClasses = RepositoryWallet.class)
 public class PersonalFinancingApplication {
 //	@Autowired
 //	static RepositoryWallet repo;

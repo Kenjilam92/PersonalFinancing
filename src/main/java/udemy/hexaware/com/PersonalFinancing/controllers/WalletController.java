@@ -1,4 +1,4 @@
-package controllers;
+package udemy.hexaware.com.PersonalFinancing.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import Repository.RepositoryWallet;
-import models.Wallet;
+import udemy.hexaware.com.PersonalFinancing.models.Wallet;
+import udemy.hexaware.com.PersonalFinancing.repository.RepositoryWallet;
 
 @RequestMapping("/api/v1/")
 @RestController
