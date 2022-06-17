@@ -15,11 +15,7 @@ import models.Wallet;
 @RestController
 
 public class WalletController {
-<<<<<<< HEAD
-	@GetMapping("/wallets")
-	public String show() {
-		return "this will show all wallets";
-=======
+
 	public WalletController() {
 	}
 	
@@ -36,6 +32,6 @@ public class WalletController {
 	public ResponseEntity<Wallet> showWalletOne() {
 		Wallet w = repo.findById(1);
 		return new ResponseEntity<>(w,HttpStatus.OK);
->>>>>>> 02f32b703b634c7cd2bd09ec9c6aeaf5be318be3
+
 	}
 }
