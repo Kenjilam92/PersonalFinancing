@@ -27,8 +27,8 @@ public class WalletTransaction {
 	private String category;
 	@Column(name="amount")
 	private double amount;
-//	@ManyToOne
-//	private Wallet wallet;
+	@ManyToOne
+	private Wallet wallet;
 	@Column(name="Transaction_date")
 	private LocalDate transactionDate;
 	@CreationTimestamp

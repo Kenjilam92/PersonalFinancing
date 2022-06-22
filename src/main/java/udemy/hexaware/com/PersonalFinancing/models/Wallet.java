@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -18,7 +19,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Table(name="Wallets")
 public class Wallet {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	@Column(name="Name")
 	private String name;
@@ -26,8 +27,8 @@ public class Wallet {
 	private String description;
 	@Column(name="Balances")
 	private double balances;
-//	@OneToMany(mappedBy="wallet")
-//	private List<WalletTransaction> transactions;
+	@OneToMany(mappedBy="wallet")
+	private List<WalletTransaction> transactions;
 	@CreationTimestamp
 	private LocalDateTime createdDate;
 	@UpdateTimestamp
@@ -65,12 +66,29 @@ public class Wallet {
 	public void setBalances(double balances) {
 		this.balances = balances;
 	}
-//	public List<WalletTransaction> getTransactions() {
-//		return transactions;
-//	}
-//	public void setTransactions(List<WalletTransaction> transactions) {
-//		this.transactions = transactions;
-//	}
+	public List<WalletTransaction> getTransactions() {
+		return transactions;
+	}
+	public void setTransactions(List<WalletTransaction> transactions) {
+		this.transactions = transactions;
+	}
+	
+	public LocalDateTime getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(LocalDateTime createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public LocalDateTime getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(LocalDateTime updateDate) {
+		this.updateDate = updateDate;
+	}
+
 	@Override
 	public String toString() {
 		return "Wallet [id=" + id + ", name=" + name + ", description=" + description + ", balances=" + balances
