@@ -1,9 +1,21 @@
+insert into Wallets (id,name,description,balances, created_date,update_date) VALUES (1,'Checking CO','Checking account in CO ',1000,LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into Wallets (id,name,description,balances, created_date,update_date) VALUES (2,'Saving CO','Saving  account in CO',15000,LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into Wallets (id,name,description,balances, created_date,update_date) VALUES (3,'CashReward','Credit Card',-267.56,LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into Wallets (id,name,description,balances, created_date,update_date) VALUES (4,'DoubleReward','this credit card has 5% cash back in gas purchase',-150,LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into Wallets (id,name,description,balances, created_date,update_date) VALUES (5,'IRA','retirement account',26000,LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into Wallets (id,name,description,balances, created_date,update_date) VALUES (6,'Cash','physical cash in my pocket ',200,LOCALTIMESTAMP,LOCALTIMESTAMP);
 
 
-insert into Wallets (id,name,description,balances) VALUES ( 0001,'Checking BA','this is a checking account in BA', 1000.00);
-insert into Wallets (id,name,description,balances) VALUES ( 0002,'Checking C0','this is a checking account in CO', 2000.00);
-insert into Wallets (id,name,description,balances) VALUES ( 0003,'Saving BA','this is a saving account in BA', 15000.00);
-insert into Wallets (id,name,description,balances) VALUES ( 0004,'Saving CO','this is a saving account in CO', 5000.00);
-insert into Wallets (id,name,description,balances) VALUES ( 0005,'Cash','this is a current physical cash in your wallet', 500.00);
-
-
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (1,'McDonald','eating big mac','Eatout',-1.59,3,PARSEDATETIME('01/23/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (2,'Game Store','buying Nintendo','entertainment ',-150,3,PARSEDATETIME('02/14/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (3,'Transfer','to CO checking','transfer',-500,2,PARSEDATETIME('01/30/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (4,'Transfer','from CO saving','transfer',500,1,PARSEDATETIME('01/30/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (5,'Employer ','paydate','income',2000,2,PARSEDATETIME('01/01/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (6,'withdraw','take some cash from the checking CO','withdraw',500,6,PARSEDATETIME('01/05/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (7,'withdraw','take some cash from the checking CO','withdraw',-500,1,PARSEDATETIME('01/05/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (8,'payment','pay the money on CashRewards','payment',-300,1,PARSEDATETIME('01/06/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (9,'payment','pay the money on CashRewards','payment',300,3,PARSEDATETIME('01/06/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (10,'ExxonMobile','','transportation',-40,4,PARSEDATETIME('01/09/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (11,'Giant','buying food','grocery',-120,3,PARSEDATETIME('01/09/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (12,'Retirement','','Retirement',-100,2,PARSEDATETIME('01/28/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);
+insert into wallet_transactions (id, store,description,category,amount,wallet,transaction_date,created_date,update_date) values (13,'Retirement','','Retirement',100,5,PARSEDATETIME('01/28/2022','MM/dd/yyyy'),LOCALTIMESTAMP,LOCALTIMESTAMP);

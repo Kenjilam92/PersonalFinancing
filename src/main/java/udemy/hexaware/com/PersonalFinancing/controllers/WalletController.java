@@ -5,8 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,5 +38,12 @@ public class WalletController {
 		Wallet w = repo.findWalletById(id);
 		return new ResponseEntity<>(w,HttpStatus.OK);
 
+	}
+	@PostMapping("wallet")
+	public ResponseEntity<Wallet> createWallet(@Validated @RequestBody Wallet w){
+//		System.out.println("#################################################################");
+		System.out.println(w);
+		repo.createWallet(w);
+		return new ResponseEntity<>(w,HttpStatus.OK);
 	}
 }

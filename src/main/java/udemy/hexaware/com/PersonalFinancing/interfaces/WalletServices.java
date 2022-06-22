@@ -6,6 +6,7 @@ import udemy.hexaware.com.PersonalFinancing.models.Wallet;
 
 public interface WalletServices {
 	
+	public Wallet createWallet (Wallet w);
 	public Wallet createWallet (String name, String desc);
 	public Wallet createWallet (String name, String desc, double balance);
 	

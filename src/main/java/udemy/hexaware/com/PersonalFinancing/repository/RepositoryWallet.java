@@ -23,6 +23,12 @@ public class RepositoryWallet implements WalletServices{
 //	}
 	
 	@Override
+	public Wallet createWallet(Wallet w) {
+		em.persist(w);
+		return null;
+	}
+	
+	@Override
 	public Wallet createWallet(String name, String desc) {
 		
 		em.persist(new Wallet(name,desc,0));

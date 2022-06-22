@@ -19,7 +19,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Table(name="Wallets")
 public class Wallet {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	@Column(name="Name")
 	private String name;
@@ -34,13 +34,15 @@ public class Wallet {
 	@UpdateTimestamp
 	private LocalDateTime updateDate;
 	
+	
+	
+	/////////////////////functions
 	public Wallet() {}
 	
 	public Wallet(String name, String description, double balances) {
 		this.name = name;
 		this.description = description;
 		this.balances = balances;
-		
 	}
 	public long getId() {
 		return id;
