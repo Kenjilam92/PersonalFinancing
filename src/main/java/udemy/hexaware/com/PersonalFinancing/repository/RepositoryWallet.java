@@ -40,6 +40,7 @@ public class RepositoryWallet implements WalletServices{
 		em.persist(new Wallet(name,desc,balance));
 		return null;
 	}
+	
 	@Override
 	public Wallet updateWallet(Wallet w) throws Exception {
 		// TODO Auto-generated method stub
@@ -57,16 +58,18 @@ public class RepositoryWallet implements WalletServices{
 	}
 	
 	@Override
-	public Wallet deleteWallet(Wallet w) throws Exception {
+	public List<Wallet> deleteWallet(Wallet w) throws Exception {
 		em.remove(w);
-		return w;
+		em.flush();
+		return showAllWallets();
 	}
 	
 	@Override
-	public Wallet deleteWallet(long id) throws Exception {
+	public List<Wallet> deleteWallet(long id) throws Exception {
 		Wallet w = em.find(Wallet.class, id);
 		em.remove(w);
-		return w;
+		em.flush();
+		return showAllWallets();
 	}
 	
 	@Override
@@ -75,9 +78,8 @@ public class RepositoryWallet implements WalletServices{
 		return em.find(Wallet.class,id);
 	}
 	
-	
 	@Override
-	public List<Wallet> showAllWallet() {
+	public List<Wallet> showAllWallets() {
 		return em.createNativeQuery("select * from WALLETS").getResultList();
 	}
 	
