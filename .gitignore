@@ -35,4 +35,3 @@ build/
 
 ### Started since using MySQL ###
 application.properties
-*.properties
